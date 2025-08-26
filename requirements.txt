@@ -1,0 +1,33 @@
+# requirements.txt
+# Description: Pinned dependencies for the ML project.
+
+# --- Core ML & Data Science Frameworks ---
+tensorflow==2.18.0     # Core deep learning framework
+pandas                 # Data manipulation and analysis
+numpy                  # Fundamental package for numerical computing
+scipy                  # Scientific and technical computing
+joblib                 # For saving/loading Python objects (e.g., ML models)
+
+# --- ML Operations & Experiment Tracking ---
+mlflow==2.14.1         # For experiment tracking and MLOps
+dvc                    # For Data Version Control
+gdown                  # For downloading files from Google Drive
+
+# --- Visualization & Notebooks ---
+notebook               # For running Jupyter notebooks
+matplotlib             # Core plotting library
+seaborn                # Statistical data visualization
+
+# --- Utilities & Helpers ---
+python-box==7.1.1      # For dot-notation access to dictionaries
+pyYAML                 # For reading and writing YAML configuration files
+types-PyYAML           # Typing stubs for PyYAML
+tqdm                   # For creating smart progress bars
+ensure==1.0.4          # For ensuring conditions and contracts in code
+
+# --- Web API (if needed) ---
+Flask                  # A micro web framework for serving models
+Flask-Cors             # For handling cross-origin requests in Flask
+
+# --- Local Package Installation ---
+-e .                   # Installs the local project in editable mode
