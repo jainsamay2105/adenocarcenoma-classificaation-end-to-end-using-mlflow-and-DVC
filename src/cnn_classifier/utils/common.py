@@ -1,11 +1,11 @@
 import os
-from box.exceptions import BoxValueError
+from box.exceptions import BoxValueError # raises BoxValueError if it receives an invalid or empty input
 import yaml
 from cnn_classifier import logger
 import json
 import joblib
 from ensure import ensure_annotations
-from box import ConfigBox
+from box import ConfigBox # everytime we get a dictionary as an output , we convert it inot config box for easy dot notation
 from pathlib import Path
 from typing import Any
 import base64
@@ -48,7 +48,7 @@ def create_directories(path_to_directories: list, verbose=True):
     """
     for path in path_to_directories:
         os.makedirs(path, exist_ok=True)
-        if verbose:
+        if verbose: # why verbose ? -> In development/debugging → you want verbose logs (verbose=True) so you can see what’s happening
             logger.info(f"created directory at: {path}")
 
 
